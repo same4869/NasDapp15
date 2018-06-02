@@ -1,0 +1,125 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="/www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>
+			星云音乐坊
+	</title>
+	<meta name="Keywords" content="星云音乐坊" /><meta name="Description" content="FM音乐电台" /><meta name="Copyright" content="aakuan.cn" /><link href="Images/web.css?v20150217" rel="stylesheet" />
+	<link rel="stylesheet" href="css/stylesheets/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="src/css/smusic.css"/>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body class="body-style">
+	<div class="aspNetHidden">
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTc1NTI0MDUxNmRkhXbaTpIxMPDoysndg51aitx85REO2oAB9WjTm+jKHs4=" />
+	</div>
+
+	<div class="aspNetHidden">
+		<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	</div>
+	<div id="body" >   
+		<div id="jp_container" role="application" aria-label="media player">
+			<div class="jp-type-playlist">
+				<div id="jplayer" class="jp-jplayer"></div>
+				<div class="jp-time">
+					<span class="jp-current-time" role="timer" aria-label="time"></span><span class="jp-duration" role="timer" aria-label="duration"></span>
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+	<div class="grid-music-container f-usn" id="container_board">
+		<div class="m-music-play-wrap">
+			<div class="u-cover"></div>
+			<div class="m-now-info">
+				<h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+				<div class="m-now-controls">
+					<div class="u-control u-process">
+						<span class="buffer-process"></span>
+						<span class="current-process"></span>
+					</div>
+					<div class="u-control u-time">00:00/00:00</div>
+					<div class="u-control u-volume">
+						<div class="volume-process" data-volume="0.50">
+							<span class="volume-current"></span>
+							<span class="volume-bar"></span>
+							<span class="volume-event"></span>
+						</div>
+						<a class="volume-control"></a>
+					</div>
+				</div>
+				<div class="m-play-controls">
+					<a class="u-play-btn prev" title="上一曲"></a>
+					<a class="u-play-btn ctrl-play play" title="暂停"></a>
+					<a class="u-play-btn next" title="下一曲"></a>
+					<a class="u-play-btn mode mode-list current" title="列表循环"></a>
+					<a class="u-play-btn mode mode-random" title="随机播放"></a>
+					<a class="u-play-btn mode mode-single" title="单曲循环"></a>
+				</div>
+			</div>
+		</div>
+		<div class="f-cb">&nbsp;</div>
+		<div class="m-music-list-wrap"></div>
+	</div>
+	<div style=" position:relative; top:-300px; margin:auto;width:500px; height:40px">
+			<button id="add_list_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" style="text-align: center;font-size: 20px;padding: 0 20px;">为歌单贡献歌曲</button>
+	</div>
+	<div style=" position:fixed; bottom:10px; margin:auto;width:100%; height:60px; color:white">
+			<p>使用前请先安装<a href="https://github.com/ChengOrangeJu/WebExtensionWallet"><span>web钱包插件</span></a>或在移动端安装<a href="https://nano.nebulas.io/">nas neno钱包</a></p>
+			<p>same-flower工作小组是一个区块链应用开发兴趣小组，致力于开发出更多更优质的DAPP，欢迎大家提宝贵意见和建议，联系方式：same4869@163.com</p><br>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">添加歌曲到共享歌单</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">歌曲名称:</label>
+							<input type="text" class="form-control" id="song-name" required>
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">演唱者或贡献者昵称（可选）:</label>
+							<textarea class="form-control" id="singer-text"></textarea>
+						</div>
+						<div class="form-group">
+								<label for="message-text" class="col-form-label">专辑封面URL地址（可选）:</label>
+								<textarea class="form-control" id="cover-text"></textarea>
+						</div>
+						<div class="form-group">
+									<label for="message-text" class="col-form-label">歌曲源URL地址:</label>
+								<textarea class="form-control" id="src-text" required></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" style="text-align: center;font-size: 20px;padding: 0 20px;">取消</button>
+					<button type="button" class="btn btn-primary" style="text-align: center;font-size: 20px;padding: 0 20px;" id="submit_sing">确认添加歌曲上链</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="src/js/smusic.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.js" ></script>
+	<script src="js/jquery.imagesloaded.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Images/Detector.js"></script>
+	<script type="text/javascript" src="Images/RequestAnimationFrame.js"></script>
+	<script type="text/javascript" src="./dist/nebulas.js"></script>
+	<script type="text/javascript" src="./dist/nebPay.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="Images/player.js"></script>
+   </body>
+</html>
+		
